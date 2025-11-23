@@ -1,0 +1,50 @@
+/**
+ * OpenDyslexic Font Face Declaration
+ *
+ * OpenDyslexic is a typeface designed against some common symptoms of dyslexia.
+ * License: Creative Commons Attribution 3.0 Unported
+ * Source: https://opendyslexic.org/
+ */
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAKskABEAAAABjwAAAK7AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGiQbgVwcg0oGYACEUAhECYM8EQwKgcYwgaEBC4YiAAE2AiQDhxIEIAWDfAcgDINiGzsXUbGjsbsAmQRBPw/HQ5F82P/PkNw+D8C6Fqo+JJImqcW/kKu0WKLM/rO/um8+YFN9lAFGd9AB/v8RZHbxAIbr0wkJCfJJiKtMIy1CzFnEKE6C/v//P3Z3dqF2d3Z3Zm53Zzd3Z3Z3d3d3Zzdn93d2d3cB7s6Z+z43vveN7/tg3vveeP8v3vvec8cRm23ttva22LYFbNvmXftjm9j/s23bNrZpY9u2bdu2bbu2bfu19e3e///fvc+9991333PPPfcGNufM19z5zLenZ755Z+adaT/PnzNnumfMmOmfW6Z/7pnx+z/Pvcf9pxnnv/9qdjg5v7j+vn31vv77Pf/9v+/3///9/v8//Pvrr9jrf/0V//r///v9//P///7v53L+/v+r+f9z/v9c/v9+//+f//v///v/v/+/f///f///v///v///v///9/v///f+/+///l+uf//+/P///+/vn////f+/v///+P/t/W9/P/7//+//v/9+z/v+P+d///V////+//u/+t+//+///v///P///n//9/f///v/3//v/////u/3//f/v//f/f///v///3///v/v/+/P///n///P///3/v/v/////f///f//t//f/v//v////u//v/3//f///v///v/v/v///v/3//v//////v//f/v///v///v/v///u//v/f///v///v///f//3///v/+////v/v/v///v///v///v/v//v/3///v//////v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAKpkABEAAAABjQAAAK4CAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGiQbgVwcg0oGYACEUAhECYM8EQwKgcIwgZ8BC4YiAAE2AiQDhxIEIAWDfAcgDINiGzsWUbGjsbsAiQRBMw+HQ5B92P/PkNw+D8C6Fqo+JJImqcW/kKu0WKLM/rO/um8+YFN9lAFGd9AB/v8RZHbxAIbr0wkJCfJJiKtMIy1CzFnEKE6C/v//P3Z3dqF2d3Z3Zm53Zzd3Z3Z3d3d3Zzdn93d2d3cB7s6Z+z43vveN7/tg3vveeP8v3vvec8cRm23ttva22LYFbNvmXftjm9j/s23bNrZpY9u2bdu2bbu2bfu19e3e///fvc+9991333PPPfcGNufM19z5zLenZ555Z+adaT/PnzNnumfMmOmfW6Z/7pnx+z/Pvcf9pxnnv/9qdjg5v7j+vn31vv77Pf/9v+/3///9/v8//Pvrr9jrf/0V//r///v9//P///7v53L+/v+r+f9z/v9c/v9+//+f//v///v/v/+/f///f///v///v///9/v///f+/+///l+uf//+/P///+/vn////f+/v///+P/t/W9/P/7//+//v/9+z/v+P+d///V////+//u/+t+//+///v///P///n//9/f///v/3//v/////u/3//f/v//f/f///v///3///v/v/+/P///n///P///3/v/v/////f///f//t//f/v//v////u//v/3//f///v///v/v/v///v/3//v//////v//f/v///v///v/v///u//v/f///v///v///f//3///v/+////v/v/v///v///v///v/v//v/3///v//////v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAKn4ABEAAAABi4AAAKmYAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGiQbgVwcg0oGYACEUAhECYM8EQwKgb8wgZsBC4YiAAE2AiQDhxIEIAWDfAcgDINiGzsVUbGjsbsAkQRBMw+HQ5B92P/PkNw+D8C6Fqo+JJImqcW/kKu0WKLM/rO/um8+YFN9lAFGd9AB/v8RZHbxAIbr0wkJCfJJiKtMIy1CzFnEKE6C/v//P3Z3dqF2d3Z3Zm53Zzd3Z3Z3d3d3Zzdn93d2d3cB7s6Z+z43vveN7/tg3vveeP8v3vvec8cRm23ttva22LYFbNvmXftjm9j/s23bNrZpY9u2bdu2bbu2bfu19e3e///fvc+9991333PPPfcGNufM19z5zLenZ555Z+adaT/PnzNnumfMmOmfW6Z/7pnx+z/Pvcf9pxnnv/9qdjg5v7j+vn31vv77Pf/9v+/3///9/v8//Pvrr9jrf/0V//r///v9//P///7v53L+/v+r+f9z/v9c/v9+//+f//v///v/v/+/f///f///v///v///9/v///f+/+///l+uf//+/P///+/vn////f+/v///+P/t/W9/P/7//+//v/9+z/v+P+d///V////+//u/+t+//+///v///P///n//9/f///v/3//v/////u/3//f/v//f/f///v///3///v/v/+/P///n///P///3/v/v/////f///f//t//f/v//v////u//v/3//f///v///v/v/v///v/3//v//////v//f/v///v///v/v///u//v/f///v///v///f//3///v/+////v/v/v///v///v///v/v//v/3///v//////v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v/f/v///v///v///v///v/v/v///v/+////v//v///v///v///v/v') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+/**
+ * Apply OpenDyslexic font when dyslexia mode is active
+ * Using !important to ensure it overrides all other font declarations
+ */
+body.atk-dyslexia-font,
+body.atk-dyslexia-font *,
+body.atk-dyslexia-font *::before,
+body.atk-dyslexia-font *::after {
+    font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
+}
+
+/* Ensure text inputs also use the font */
+body.atk-dyslexia-font input,
+body.atk-dyslexia-font textarea,
+body.atk-dyslexia-font select,
+body.atk-dyslexia-font button {
+    font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
+}

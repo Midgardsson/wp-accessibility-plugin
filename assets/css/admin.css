@@ -1,0 +1,27 @@
+/**
+ * Admin Styles for Accessibility Toolkit
+ */
+
+.atk-position-field {
+    display: none;
+}
+
+.atk-position-field.active {
+    display: table-row;
+}
+
+.atk-color-picker {
+    max-width: 100px;
+}
+
+.form-table th h2 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5em;
+}
+
+.form-table th h2:first-of-type {
+    margin-top: 0;
+}
