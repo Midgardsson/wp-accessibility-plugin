@@ -1,0 +1,235 @@
+/**
+ * Admin Styles for Accessibility Toolkit
+ *
+ * @package Accessibility_Toolkit
+ */
+
+.atk-admin-wrap {
+    background: #f0f0f1;
+    margin: -10px -20px -20px;
+    padding: 20px;
+}
+
+.atk-admin-wrap h1 {
+    background: #fff;
+    padding: 20px;
+    margin: 0 0 20px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-left: 4px solid #2271b1;
+}
+
+.atk-admin-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+    align-items: start;
+}
+
+/* Main Content Area */
+.atk-admin-main {
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.atk-admin-main h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2271b1;
+    color: #1d2327;
+    font-size: 18px;
+}
+
+.atk-admin-main table {
+    margin-top: 20px;
+}
+
+.atk-admin-main th {
+    padding: 15px 10px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.atk-admin-main td {
+    padding: 15px 10px;
+}
+
+.atk-admin-main input[type="number"],
+.atk-admin-main input[type="text"] {
+    width: 100px;
+}
+
+.atk-admin-main input[type="color"] {
+    width: 60px;
+    height: 40px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.atk-admin-main input[type="color"]:hover {
+    border-color: #2271b1;
+}
+
+.atk-admin-main input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.atk-admin-main label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.atk-admin-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.atk-info-box {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    border-left: 4px solid #2271b1;
+}
+
+.atk-info-box h3 {
+    margin-top: 0;
+    color: #1d2327;
+    font-size: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.atk-info-box p {
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+    color: #50575e;
+}
+
+.atk-info-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Feature List */
+.atk-feature-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.atk-feature-list li {
+    padding: 8px 0;
+    color: #50575e;
+    line-height: 1.6;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.atk-feature-list li:last-child {
+    border-bottom: none;
+}
+
+/* Preview Widget */
+.atk-preview {
+    border-left-color: #00a32a;
+}
+
+.atk-preview-widget {
+    text-align: center;
+    padding: 20px;
+    background: #f0f0f1;
+    border-radius: 4px;
+}
+
+.atk-preview-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #2271b1;
+    color: #fff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.atk-preview-label {
+    font-size: 13px;
+    color: #50575e;
+    margin: 10px 0 0 0;
+}
+
+/* Support Box */
+.atk-support {
+    border-left-color: #d63638;
+}
+
+.atk-support .button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    .atk-admin-container {
+        grid-template-columns: 1fr;
+    }
+
+    .atk-admin-sidebar {
+        order: -1;
+    }
+}
+
+/* Settings Sections */
+.form-table th {
+    width: 200px;
+}
+
+/* Submit Button */
+.submit .button-primary {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    padding: 10px 20px;
+}
+
+.submit .button-primary:hover {
+    background: #135e96;
+    border-color: #135e96;
+}
+
+/* Success/Error Messages */
+.notice {
+    margin: 0 0 20px 0;
+}
+
+/* Color Picker Container */
+td input[type="color"] {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Number Input Container */
+td input[type="number"] {
+    padding: 6px 10px;
+}
+
+/* Description Text */
+.description {
+    display: block;
+    margin-top: 8px;
+    color: #646970;
+    font-size: 13px;
+}
