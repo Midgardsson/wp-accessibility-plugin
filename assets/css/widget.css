@@ -1,0 +1,208 @@
+/**
+ * WP Accessibility Widget Styles
+ * Fixed positioning: top:10%, left:10% to prevent widget from overflowing
+ */
+
+/* OpenDyslexic Font Face - Font path: assets/fonts/OpenDyslexic-Regular.ttf */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../fonts/OpenDyslexic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Widget Container - Fixed position with proper margins */
+.wp-accessibility-widget {
+    position: fixed;
+    top: 10%; /* Fixed: Set to 10% to prevent overflow */
+    left: 10%; /* Fixed: Set to 10% to prevent overflow */
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999999;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 14px;
+    min-width: 280px;
+    max-width: 320px;
+    cursor: move;
+    user-select: none;
+}
+
+/* Widget Header */
+.wp-accessibility-widget .widget-header {
+    background: #333;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+
+.wp-accessibility-widget .widget-title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.wp-accessibility-widget .widget-toggle {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 18px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.wp-accessibility-widget.collapsed .widget-toggle {
+    transform: rotate(180deg);
+}
+
+.wp-accessibility-widget .toggle-icon {
+    display: block;
+}
+
+/* Widget Content */
+.wp-accessibility-widget .widget-content {
+    padding: 16px;
+    max-height: 500px;
+    overflow-y: auto;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.wp-accessibility-widget.collapsed .widget-content {
+    max-height: 0;
+    padding: 0 16px;
+    overflow: hidden;
+}
+
+/* Control Groups */
+.wp-accessibility-widget .control-group {
+    margin-bottom: 16px;
+}
+
+.wp-accessibility-widget .control-group:last-child {
+    margin-bottom: 0;
+}
+
+.wp-accessibility-widget .control-group > label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Button Groups */
+.wp-accessibility-widget .button-group {
+    display: flex;
+    gap: 8px;
+}
+
+/* Control Buttons */
+.wp-accessibility-widget .control-btn {
+    flex: 1;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.wp-accessibility-widget .control-btn:hover {
+    background: #005a87;
+}
+
+.wp-accessibility-widget .control-btn:active {
+    background: #004368;
+}
+
+.wp-accessibility-widget .control-btn:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+/* Reset Button */
+.wp-accessibility-widget .reset-btn {
+    background: #dc3232;
+    width: 100%;
+}
+
+.wp-accessibility-widget .reset-btn:hover {
+    background: #a82828;
+}
+
+.wp-accessibility-widget .reset-btn:active {
+    background: #8a2222;
+}
+
+/* Checkbox Controls */
+.wp-accessibility-widget input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.wp-accessibility-widget .control-group label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+/* Font Size Adjustments - Applied to body */
+body.font-size-small {
+    font-size: 14px !important;
+}
+
+body.font-size-medium {
+    font-size: 16px !important;
+}
+
+body.font-size-large {
+    font-size: 18px !important;
+}
+
+body.font-size-xlarge {
+    font-size: 20px !important;
+}
+
+body.font-size-xxlarge {
+    font-size: 22px !important;
+}
+
+/* Dyslexic Font */
+body.dyslexic-font,
+body.dyslexic-font * {
+    font-family: 'OpenDyslexic', sans-serif !important;
+}
+
+/* Accessibility - High Contrast Focus */
+.wp-accessibility-widget *:focus-visible {
+    outline: 3px solid #0073aa;
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wp-accessibility-widget {
+        top: 5%;
+        left: 5%;
+        right: 5%;
+        max-width: none;
+        min-width: auto;
+    }
+}
+
+/* Dragging State */
+.wp-accessibility-widget.dragging {
+    opacity: 0.8;
+    cursor: move;
+}
