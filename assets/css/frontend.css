@@ -1,0 +1,690 @@
+/**
+ * Frontend Styles for Accessibility Toolkit
+ */
+
+/* ===================================
+   Widget Base Styles
+   =================================== */
+
+.atk-widget {
+    position: fixed;
+    z-index: 999999;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+}
+
+/* ===================================
+   Widget Floating Position (Circle)
+   =================================== */
+
+.atk-widget-floating .atk-toggle-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #0073aa;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.atk-widget-floating .atk-toggle-button:hover {
+    background: #005a87;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.atk-widget-floating .atk-toggle-button:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+.atk-widget-floating .atk-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+
+.atk-widget-floating .atk-icon-text {
+    font-size: 32px;
+    line-height: 1;
+    display: none;
+}
+
+/* ===================================
+   Widget Edge Position (Rectangle)
+   =================================== */
+
+.atk-widget-edge-left .atk-toggle-button,
+.atk-widget-edge-right .atk-toggle-button {
+    width: 48px;
+    height: 120px;
+    border-radius: 0 12px 12px 0;
+    background: #0073aa;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    padding: 8px;
+    writing-mode: vertical-lr;
+}
+
+.atk-widget-edge-right .atk-toggle-button {
+    border-radius: 12px 0 0 12px;
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
+    writing-mode: vertical-rl;
+}
+
+.atk-widget-edge-left .atk-toggle-button:hover,
+.atk-widget-edge-right .atk-toggle-button:hover {
+    background: #005a87;
+    transform: scaleX(1.1);
+}
+
+.atk-widget-edge-left .atk-toggle-button:hover {
+    box-shadow: 3px 0 16px rgba(0, 0, 0, 0.2);
+}
+
+.atk-widget-edge-right .atk-toggle-button:hover {
+    box-shadow: -3px 0 16px rgba(0, 0, 0, 0.2);
+}
+
+.atk-widget-edge-left .atk-toggle-button:focus,
+.atk-widget-edge-right .atk-toggle-button:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+.atk-widget-edge-left .atk-icon,
+.atk-widget-edge-right .atk-icon {
+    width: 28px;
+    height: 28px;
+    transform: rotate(0deg);
+}
+
+.atk-widget-edge-left .atk-icon-text,
+.atk-widget-edge-right .atk-icon-text {
+    font-size: 24px;
+    line-height: 1;
+    margin-top: 4px;
+    display: none;
+}
+
+/* ===================================
+   Widget Bottom Edge Position
+   =================================== */
+
+.atk-widget-edge-bottom .atk-toggle-button {
+    width: 120px;
+    height: 48px;
+    border-radius: 12px 12px 0 0;
+    background: #0073aa;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    padding: 8px;
+}
+
+.atk-widget-edge-bottom .atk-toggle-button:hover {
+    background: #005a87;
+    transform: scaleY(1.1);
+    box-shadow: 0 -3px 16px rgba(0, 0, 0, 0.2);
+}
+
+.atk-widget-edge-bottom .atk-toggle-button:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+.atk-widget-edge-bottom .atk-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.atk-widget-edge-bottom .atk-icon-text {
+    font-size: 24px;
+    line-height: 1;
+    display: none;
+}
+
+/* ===================================
+   Panel Styles
+   =================================== */
+
+.atk-panel {
+    position: absolute;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    max-width: 400px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.atk-panel[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* Panel positioning based on widget position */
+.atk-widget-floating .atk-panel {
+    top: 70px;
+    right: 0;
+}
+
+.atk-widget-edge-left .atk-panel {
+    top: 0;
+    left: 58px;
+}
+
+.atk-widget-edge-right .atk-panel {
+    top: 0;
+    right: 58px;
+}
+
+.atk-widget-edge-bottom .atk-panel {
+    bottom: 58px;
+    right: 0;
+}
+
+/* ===================================
+   Panel Header
+   =================================== */
+
+.atk-panel-header {
+    background: #0073aa;
+    color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.atk-panel-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.atk-close-button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.atk-close-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.atk-close-button:focus {
+    outline: 2px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+.atk-close-button svg {
+    display: block;
+}
+
+/* ===================================
+   Panel Content
+   =================================== */
+
+.atk-panel-content {
+    padding: 20px;
+}
+
+.atk-control-group {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.atk-control-group:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.atk-control-label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.atk-control-label:only-child {
+    margin-bottom: 0;
+}
+
+.atk-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #0073aa;
+}
+
+.atk-checkbox:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+/* ===================================
+   Button Group
+   =================================== */
+
+.atk-button-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.atk-btn {
+    flex: 1;
+    padding: 10px 16px;
+    background: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atk-btn:hover {
+    background: #005a87;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.atk-btn:active {
+    transform: translateY(0);
+}
+
+.atk-btn:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+.atk-btn-decrease span,
+.atk-btn-increase span,
+.atk-btn-reset span {
+    font-size: 18px;
+}
+
+.atk-btn-full {
+    width: 100%;
+}
+
+.atk-btn-reset-all {
+    background: #dc3545;
+}
+
+.atk-btn-reset-all:hover {
+    background: #c82333;
+}
+
+/* ===================================
+   Font Size Display
+   =================================== */
+
+.atk-font-size-display {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.atk-current-size {
+    color: #0073aa;
+    font-weight: 700;
+}
+
+/* ===================================
+   Font Size Adjustments
+   =================================== */
+
+body.atk-font-adjusted {
+    /* Base class for font adjustments */
+}
+
+body.atk-font-adjusted * {
+    transition: font-size 0.3s ease;
+}
+
+/* Prevent layout shifts */
+body.atk-font-adjusted img,
+body.atk-font-adjusted svg,
+body.atk-font-adjusted video,
+body.atk-font-adjusted iframe {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* ===================================
+   Dark Mode
+   =================================== */
+
+body.atk-dark-mode {
+    background-color: var(--atk-dark-bg, #121212) !important;
+    color: var(--atk-dark-text, #ffffff) !important;
+}
+
+body.atk-dark-mode::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--atk-dark-bg, #121212);
+    opacity: var(--atk-dark-opacity, 0.95);
+    z-index: -1;
+    pointer-events: none;
+}
+
+body.atk-dark-mode *:not(.atk-widget):not(.atk-widget *) {
+    background-color: transparent !important;
+    color: var(--atk-dark-text, #ffffff) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.atk-dark-mode a {
+    color: #4da6ff !important;
+}
+
+body.atk-dark-mode a:hover {
+    color: #80bfff !important;
+}
+
+body.atk-dark-mode img,
+body.atk-dark-mode video {
+    opacity: 0.9;
+    filter: brightness(0.8) contrast(1.1);
+}
+
+/* Keep widget visible in dark mode */
+body.atk-dark-mode .atk-widget {
+    background: transparent !important;
+}
+
+body.atk-dark-mode .atk-panel {
+    background: #1e1e1e !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.atk-dark-mode .atk-panel-header {
+    background: #0073aa !important;
+    color: white !important;
+    border-color: #0073aa !important;
+}
+
+body.atk-dark-mode .atk-panel-content {
+    background: #1e1e1e !important;
+}
+
+body.atk-dark-mode .atk-control-label {
+    color: #ffffff !important;
+}
+
+body.atk-dark-mode .atk-control-group {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ===================================
+   High Contrast Mode
+   =================================== */
+
+body.atk-high-contrast {
+    background-color: var(--atk-contrast-bg, #000000) !important;
+    color: var(--atk-contrast-text, #ffff00) !important;
+}
+
+body.atk-high-contrast * {
+    background-color: var(--atk-contrast-bg, #000000) !important;
+    color: var(--atk-contrast-text, #ffff00) !important;
+    border-color: var(--atk-contrast-text, #ffff00) !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+body.atk-high-contrast a {
+    color: #00ffff !important;
+    text-decoration: underline !important;
+}
+
+body.atk-high-contrast button,
+body.atk-high-contrast input,
+body.atk-high-contrast select,
+body.atk-high-contrast textarea {
+    border: 2px solid var(--atk-contrast-text, #ffff00) !important;
+}
+
+body.atk-high-contrast img,
+body.atk-high-contrast video {
+    filter: contrast(2) brightness(1.2);
+    border: 2px solid var(--atk-contrast-text, #ffff00) !important;
+}
+
+/* Keep widget visible and functional in high contrast */
+body.atk-high-contrast .atk-widget {
+    position: fixed !important;
+    z-index: 999999 !important;
+}
+
+body.atk-high-contrast .atk-toggle-button {
+    background: var(--atk-contrast-text, #ffff00) !important;
+    color: var(--atk-contrast-bg, #000000) !important;
+    border: 3px solid var(--atk-contrast-bg, #000000) !important;
+}
+
+body.atk-high-contrast .atk-panel {
+    background: var(--atk-contrast-bg, #000000) !important;
+    border: 3px solid var(--atk-contrast-text, #ffff00) !important;
+}
+
+body.atk-high-contrast .atk-panel-header {
+    background: var(--atk-contrast-bg, #000000) !important;
+    color: var(--atk-contrast-text, #ffff00) !important;
+    border-bottom: 2px solid var(--atk-contrast-text, #ffff00) !important;
+}
+
+body.atk-high-contrast .atk-btn {
+    background: var(--atk-contrast-text, #ffff00) !important;
+    color: var(--atk-contrast-bg, #000000) !important;
+    border: 2px solid var(--atk-contrast-bg, #000000) !important;
+}
+
+body.atk-high-contrast .atk-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   Accessibility Improvements
+   =================================== */
+
+/* Focus visible for better keyboard navigation */
+*:focus-visible {
+    outline: 3px solid #0073aa;
+    outline-offset: 2px;
+}
+
+/* Skip links */
+.atk-skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #0073aa;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.atk-skip-link:focus {
+    top: 0;
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+
+@media (max-width: 768px) {
+    .atk-panel {
+        max-width: calc(100vw - 40px);
+        min-width: 280px;
+    }
+
+    .atk-widget-floating .atk-panel {
+        right: -10px;
+    }
+
+    .atk-widget-edge-bottom .atk-panel {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .atk-widget-edge-bottom .atk-panel[aria-hidden="false"] {
+        transform: translateX(50%) scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .atk-widget-floating .atk-toggle-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .atk-widget-floating .atk-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .atk-widget-edge-left .atk-toggle-button,
+    .atk-widget-edge-right .atk-toggle-button {
+        width: 40px;
+        height: 100px;
+    }
+
+    .atk-widget-edge-bottom .atk-toggle-button {
+        width: 100px;
+        height: 40px;
+    }
+
+    .atk-panel-content {
+        padding: 16px;
+    }
+
+    .atk-control-group {
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+    }
+
+    .atk-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+/* ===================================
+   Print Styles
+   =================================== */
+
+@media print {
+    .atk-widget {
+        display: none !important;
+    }
+
+    body.atk-dark-mode,
+    body.atk-high-contrast {
+        background: white !important;
+        color: black !important;
+    }
+
+    body.atk-dark-mode *,
+    body.atk-high-contrast * {
+        background: transparent !important;
+        color: black !important;
+    }
+}
+
+/* ===================================
+   Animations
+   =================================== */
+
+@keyframes atk-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.atk-toggle-button.atk-active {
+    animation: atk-pulse 2s ease-in-out infinite;
+}
+
+/* ===================================
+   Loading State
+   =================================== */
+
+.atk-loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.atk-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 3px solid #0073aa;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: atk-spin 1s linear infinite;
+}
+
+@keyframes atk-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
